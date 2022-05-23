@@ -1,0 +1,20 @@
+#container {
+    margin-top: 40px;
+    
+    padding: 20px;
+
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px 2px rgb(161, 156, 156);
+}
+
+#circular-progress {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    margin: auto;
+    background: #030303
+    
+    
+    
+    
+}
