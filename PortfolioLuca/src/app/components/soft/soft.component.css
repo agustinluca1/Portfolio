@@ -1,20 +1,19 @@
 #container {
     margin-top: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
     
-    padding: 20px;
+    max-width: 2500px;
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     border-radius: 20px;
     box-shadow: 3px 3px 5px 2px rgb(161, 156, 156);
 }
 
-#circular-progress {
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    margin: auto;
-    background: #030303
-    
-    
-    
-    
+#title {
+    text-align: center;
 }

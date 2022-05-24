@@ -1,8 +1,19 @@
 #container {
     margin-top: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
     
-    padding: 20px;
+    max-width: 2500px;
+    
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     border-radius: 20px;
     box-shadow: 3px 3px 5px 2px rgb(161, 156, 156);
+}
+
+#title {
+    text-align: center;
 }
