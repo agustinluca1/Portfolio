@@ -3,22 +3,18 @@
         <div class="row" id="title">
             <h3>Habilidades Blandas</h3>
         </div>
-        <div class="row"> 
-          <div>
-              <div class="col" style="margin: auto; max-width: min-content;">
-                <ngx-charts-gauge
-                [view]="view"
-                [scheme]="colorScheme"
-                [results]="single"
-                [legend]="legend"
-                [legendPosition]="legendPosition"
-                (select)="onSelect($event)"
-                (activate)="onActivate($event)"
-                (deactivate)="onDeactivate($event)">
-                </ngx-charts-gauge>
-              </div>
-          </div>
-          
+        <div class="row">           
+              <div class="col" style="margin: auto; max-width: max-content;">
+                <div style="object-fit: contain;">
+                  <ngx-charts-pie-grid
+                                                            
+                    [scheme]="colorScheme"
+                    [results]="single"                    
+                    [designatedTotal]="numeroTotal"
+                    (select)="onSelect($event)">
+                  </ngx-charts-pie-grid>
+                </div>
+              </div>          
         </div>
     </div>
 </div>
