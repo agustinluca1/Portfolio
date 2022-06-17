@@ -1,0 +1,65 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-image" style="
+          background-color: #00358e;
+          height: 300px;
+          border-radius: 20px;
+          margin: 15px;
+          box-shadow: 3px 3px 5px 2px rgb(161, 156, 156);
+          ">
+          </div>
+    <!-- Background image -->
+  
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background-color: hsla(0, 0%, 100%, 1);          
+          border-radius: 20px;
+          box-shadow: 3px 3px 5px 2px rgb(161, 156, 156);
+          ">
+      <div class="card-body py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-5">Ingresa y edita</h2>
+            <form [formGroup]="form">
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" formControlName="email" id="form3Example3" class="form-control" />
+                <label class="form-label" for="form3Example3">Usuario</label>
+                <div *ngIf="Email?.errors && Email?.touched">
+                  <p *ngIf="Email?.hasError('required')" class="text-danger">
+                    El email es requerido.
+                  </p>
+                  <p *ngIf="Email?.hasError('email')" class="text-danger">
+                    El email debe ser valido.
+                  </p>
+                </div>
+              </div>
+  
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" formControlName="password" id="form3Example4" class="form-control" />
+                <label class="form-label" for="form3Example4">Contraseña</label>
+                <div *ngIf="Pass?.errors && Pass?.touched">
+                  <p *ngIf="Pass?.hasError('required')" class="text-danger">
+                    La contraseña es requerida.
+                  </p>
+                  <p *ngIf="Pass?.errors?.['minlength']" class="text-danger">
+                    La contraseña debe tener 8 o más caracteres.
+                  </p>
+                </div>
+              </div>
+  
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4" style="background-color: #00358e">
+                Ingresar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+  
