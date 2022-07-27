@@ -1,0 +1,21 @@
+<div class="container" *ngIf="proye">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombrePr">Titulo</label>
+                    <input type="text" class="form-control" id="nombrePr" name="nombrePr" [(ngModel)]="proye.nombrePr" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaPr">Fecha</label>
+                    <input type="date" class="form-control" id="fechaPr" name="fechaPr" [(ngModel)]="proye.fechaPr" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionPr">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcionPr" name="descripcionPr" [(ngModel)]="proye.descripcionPr" required>
+                </div>
+                <button class="btn btn-outline-primary" style="margin-top: 10px;">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-4" id="name"><h2>{{persona.nombre}} {{persona.apellido}}</h2></div>
         
-        <div class="col">
-            <h2 style="padding-left: 30px;">Desarrollador Web Full Stack Jr.</h2>          
-            <ul>
-                <li>En esta sección tendría que poner información profesional resumida (en un futuro xD).</li>
-                <li>Recientemente finalice la capacitación de Argentina Programa, 
-                    con la cual adquirí los conocimientos para realizar este portfolio web. 
-                    Espero que lo disfruten tanto como yo cuando lo hice.
+        <div class="col">          
+            <ul *ngFor="let About of about">
+                <h2>{{About.nombreAb}}</h2>
+                <li>{{About.descripcionAb}}
+                    <button class="btn btn-outline-success" routerLink="/editab/{{About.id}}/" *ngIf="isLogged">
+                        <i class="bi bi-pen"></i>
+                    </button>
                 </li>
             </ul>
         </div>

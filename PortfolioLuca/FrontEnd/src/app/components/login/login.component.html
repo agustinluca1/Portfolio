@@ -22,33 +22,40 @@
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
             <h2 class="fw-bold mb-5">Ingresa y edita</h2>
-            <form [formGroup]="form">
+            
+            <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input type="email" formControlName="email" id="form3Example3" class="form-control" />
-                <label class="form-label" for="form3Example3">Usuario</label>
-                <div *ngIf="Email?.errors && Email?.touched">
-                  <p *ngIf="Email?.hasError('required')" class="text-danger">
-                    El email es requerido.
+                <input type="email" name="nombreUsuario" id="nombreUsuario" 
+                class="form-control" [(ngModel)]="nombreUsuario" required />
+                
+                <label class="form-label" for="nombreUsuario">Usuario</label>
+                
+                <!--<div *ngIf="nombreUsuario?.errors && nombreUsuario?.touched">
+                  <p *ngIf="nombreUsuario?.hasError('required')" class="text-danger">
+                    El usuario es requerido.
                   </p>
-                  <p *ngIf="Email?.hasError('email')" class="text-danger">
-                    El email debe ser valido.
+                  <p *ngIf="nombreUsuario?.hasError('email')" class="text-danger">
+                    Debes ingresar un usuario valido.
                   </p>
-                </div>
-              </div>
+                </div>-->
+              </div> 
   
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" formControlName="password" id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Contraseña</label>
-                <div *ngIf="Pass?.errors && Pass?.touched">
-                  <p *ngIf="Pass?.hasError('required')" class="text-danger">
+                <input type="password" name="password" id="password" class="form-control" 
+                [(ngModel)]="password" required />
+                
+                <label class="form-label" for="password">Contraseña</label>
+                
+                <!--<div *ngIf="password?.errors && password?.touched">
+                  <p *ngIf="password?.hasError('required')" class="text-danger">
                     La contraseña es requerida.
                   </p>
-                  <p *ngIf="Pass?.errors?.['minlength']" class="text-danger">
+                  <p *ngIf="password?.errors?.['minlength']" class="text-danger">
                     La contraseña debe tener 8 o más caracteres.
                   </p>
-                </div>
+                </div>-->
               </div>
   
               <!-- Submit button -->
@@ -56,6 +63,7 @@
                 Ingresar
               </button>
             </form>
+
           </div>
         </div>
       </div>

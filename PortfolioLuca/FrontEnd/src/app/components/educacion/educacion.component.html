@@ -2,13 +2,23 @@
     <div class="row" id="container">
         <div class="row" id="title">
             <h3>Educación</h3>
+            <button type="button" class="btn btn-outline-success" routerLink="/nuevaedu" *ngIf="isLogged">
+                Agregar
+            </button>
         </div>
         <div class="row" id="job">
             <ul> 
-                <li><h5>Escuela secundaria Brigadier Mayor Juan I. San Martin</h5></li>
-                Con especialización en Cs. Sociales y Humanidades.
-                <li><h5>Argentina Programa</h5></li>
-                Capacitación Full Stack Jr Web Developer.
+                <li *ngFor="let Educacion of educ">
+                    <h5>{{Educacion.nombreEdu}}</h5>
+                    <p>{{Educacion.descripcionEdu}}</p>
+                        <button class="btn btn-outline-success" routerLink="/editedu/{{Educacion.id}}/" *ngIf="isLogged">
+                            <i class="bi bi-pen"></i>
+                        </button>
+                        <button class="btn btn-outline-danger" (click)="delete(Educacion.id)" *ngIf="isLogged">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                </li>
+                
             </ul>
         </div>
 
