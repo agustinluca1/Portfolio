@@ -1,20 +1,94 @@
 <div class="container-fluid">
-    <div class="row" id="container" >
-        <div class="row" id="title">
-            <h3>Habilidades Blandas</h3>
-        </div>
-        <div class="row">           
-              <div class="col" style="margin: auto; max-width: max-content;">
-                <div style="object-fit: contain;">
-                  <ngx-charts-pie-grid
-                                                            
-                    [scheme]="colorScheme"
-                    [results]="single"                    
-                    [designatedTotal]="numeroTotal"
-                    (select)="onSelect($event)">
-                  </ngx-charts-pie-grid>
-                </div>
-              </div>          
-        </div>
+  <div class="row" id="container">
+    <div class="row" id="title">
+      <h3>Habilidades Blandas</h3>
     </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <circle-progress 
+          [percent]="85" 
+          [radius]="60" 
+          [outerStrokeWidth]="8" 
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#00358e'" 
+          [innerStrokeColor]="'#e7e8ea'" 
+          [title]="'Trabajo en equipo'"
+          [titleFontSize]="'12'"
+          [subtitle]="'85%'" 
+          [animation]="true" 
+          [animationDuration]="600"
+          [titleFontWeight]="'10'">
+        </circle-progress>  
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <circle-progress 
+        [percent]="75" 
+        [radius]="60" 
+        [outerStrokeWidth]="8" 
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#00358e'" 
+        [innerStrokeColor]="'#e7e8ea'" 
+        [title]="'Manejo del tiempo'"
+        [titleFontSize]="'12'"
+        [subtitle]="'75%'" 
+        [animation]="true" 
+        [animationDuration]="600">
+      </circle-progress>  
+    </div><div class="col-lg-4 col-md-4 col-sm-4">
+    <circle-progress 
+      [percent]="80" 
+      [radius]="60" 
+      [outerStrokeWidth]="8" 
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#00358e'" 
+      [innerStrokeColor]="'#e7e8ea'" 
+      [title]="'Autodesarrollo'"
+      [titleFontSize]="'12'"
+      [subtitle]="'80%'" 
+      [animation]="true" 
+      [animationDuration]="600">
+    </circle-progress>  
+  </div><div class="col-lg-4 col-md-4 col-sm-4">
+  <circle-progress 
+    [percent]="90" 
+    [radius]="60" 
+    [outerStrokeWidth]="8" 
+    [innerStrokeWidth]="8"
+    [outerStrokeColor]="'#00358e'" 
+    [innerStrokeColor]="'#e7e8ea'" 
+    [title]="'Autoconocimiento'"
+    [titleFontSize]="'12'"
+    [subtitle]="'90%'" 
+    [animation]="true" 
+    [animationDuration]="600">
+  </circle-progress>  
+</div><div class="col-lg-4 col-md-4 col-sm-4">
+  <circle-progress 
+    [percent]="95" 
+    [radius]="60" 
+    [outerStrokeWidth]="8" 
+    [innerStrokeWidth]="8"
+    [outerStrokeColor]="'#00358e'" 
+    [innerStrokeColor]="'#e7e8ea'" 
+    [title]="'Atencion al detalle'"
+    [titleFontSize]="'12'"
+    [subtitle]="'95%'" 
+    [animation]="true" 
+    [animationDuration]="600">
+  </circle-progress>  
+</div><div class="col-lg-4 col-md-4 col-sm-4">
+  <circle-progress 
+    [percent]="100" 
+    [radius]="60" 
+    [outerStrokeWidth]="8" 
+    [innerStrokeWidth]="8"
+    [outerStrokeColor]="'#00358e'" 
+    [innerStrokeColor]="'#e7e8ea'" 
+    [title]="'Responsabilidad'"
+    [titleFontSize]="'12'"
+    [subtitle]="'100%'" 
+    [animation]="true" 
+    [animationDuration]="600">
+  </circle-progress>  
+</div>
+  </div>
 </div>

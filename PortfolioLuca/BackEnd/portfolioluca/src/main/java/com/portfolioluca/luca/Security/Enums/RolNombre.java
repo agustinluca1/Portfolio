@@ -1,0 +1,5 @@
+package com.portfolioluca.luca.Security.Enums;
+
+public enum RolNombre {
+    ROLE_ADMIN, ROLE_USER
+}

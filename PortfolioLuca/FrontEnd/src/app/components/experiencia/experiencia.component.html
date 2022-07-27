@@ -2,16 +2,21 @@
     <div class="row" id="container">
         <div class="row" id="title">
             <h3>Experiencia</h3>
+            <button type="button" class="btn btn-outline-success" routerLink="/nuevaexp" *ngIf="isLogged">
+                    Agregar
+            </button>     
         </div>
-        <div class="row" id="job">
+        <div class="row" id="job" style="margin-top: 10px;">
             <ul> 
-                <li>Como se habrán dado cuenta, si ya inspeccionaron el código, no cuento con
-                ningún tipo de experiencia.  
-                El curso de Argentina Programa fue mi primer contacto con la 
-                programación web, allá por octubre del 2021. 
-                Por lo que este portfolio es mi primer "trabajo" y 
-                seguro que hay miles de cosas para mejorar. A medida que vaya ganando experiencia
-                lo iré modificando hasta que quede super bonito y funcional!
+                <li *ngFor="let Experiencia of expe">
+                    <h5>{{Experiencia.nombreE}}</h5>
+                    <p>{{Experiencia.descripcionE}}</p>
+                    <button class="btn btn-outline-success" routerLink="/editexp/{{Experiencia.id}}/" *ngIf="isLogged">
+                        <i class="bi bi-pen"></i>
+                    </button>
+                    <button class="btn btn-outline-danger" (click)="delete(Experiencia.id)" *ngIf="isLogged">
+                        <i class="bi bi-trash3"></i>
+                    </button>
                 </li>
             </ul>
         </div>

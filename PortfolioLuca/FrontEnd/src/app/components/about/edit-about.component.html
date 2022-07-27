@@ -1,0 +1,17 @@
+<div class="container" *ngIf="abou">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreAb">Titulo</label>
+                    <input type="text" class="form-control" id="nombreAb" name="nombreAb" [(ngModel)]="abou.nombreAb" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionAb">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcionAb" name="descripcionAb" [(ngModel)]="abou.descripcionAb" required>
+                </div>
+                <button class="btn btn-outline-primary" style="margin-top: 10px;">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
