@@ -7,7 +7,7 @@ import { About } from '../model/about';
   providedIn: 'root'
 })
 export class SAboutService {
-  abURL = 'http://localhost:8080/about/'
+  abURL = 'https://backendportfolioluca.herokuapp.com/about/'
 
   constructor(private httpClient: HttpClient) { }
 

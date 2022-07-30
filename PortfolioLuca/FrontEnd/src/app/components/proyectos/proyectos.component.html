@@ -11,10 +11,7 @@
                 <li *ngFor="let Proyectos of proye">
                     <h5 style="margin-top: 10px;">{{Proyectos.nombrePr}}</h5>
                     <b>Fecha de realización: </b>{{Proyectos.fechaPr}}<br>
-                    <b>Descripción:</b>{{Proyectos.descripcionPr}}                   
-                    Se podría decir
-                    que este es el primer prototipo de mi portfolio.<br>
-                    Adjunto los respectivos links de GitHub.<br>
+                    <b>Descripción: </b>{{Proyectos.descripcionPr}}                   
                     <button class="btn btn-outline-success" routerLink="/editproye/{{Proyectos.id}}/" *ngIf="isLogged">
                         <i class="bi bi-pen"></i>
                     </button>
